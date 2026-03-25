@@ -1,0 +1,120 @@
+:root {
+    --gold: #d4af37;
+    --dark-bg: #050505;
+    --white: #ffffff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--white);
+    font-family: 'Cairo', sans-serif;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+/* الخلفية المتحركة */
+#emoji-world {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.floating-emoji {
+    position: absolute;
+    font-size: 1.5rem;
+    animation: rise 8s linear infinite;
+    opacity: 0.2;
+}
+
+@keyframes rise {
+    0% { transform: translateY(110vh) rotate(0deg); opacity: 0; }
+    50% { opacity: 0.4; }
+    100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+}
+
+/* الهيدر */
+header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle, #1a1a1a 0%, #050505 100%);
+}
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 4px solid var(--gold);
+    box-shadow: 0 0 30px var(--gold);
+    object-fit: cover;
+    animation: floatImg 3s infinite ease-in-out;
+}
+
+@keyframes floatImg {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+h1.glitch {
+    font-size: 4rem;
+    color: var(--gold);
+    margin: 15px 0;
+    text-shadow: 2px 2px 15px rgba(212, 175, 55, 0.6);
+}
+
+.dynamic-text-container { height: 40px; margin-bottom: 25px; }
+#changing-text { font-size: 1.2rem; color: #ccc; font-weight: bold; transition: opacity 0.5s; }
+
+/* الأزرار */
+.social-btns { display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; }
+.btn {
+    padding: 12px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: white;
+    border: 1px solid var(--gold);
+    transition: 0.3s;
+    font-size: 0.9rem;
+    direction: ltr; /* لجعل علامة @ تظهر بشكل صحيح */
+}
+.btn:hover { background: var(--gold); color: black; transform: translateY(-5px); box-shadow: 0 5px 15px var(--gold); }
+.whatsapp { border-color: #25d366; color: #25d366; }
+.whatsapp:hover { background: #25d366; color: white; box-shadow: 0 5px 15px #25d366; }
+
+/* قسم الريلز */
+.reels-container { padding: 60px 5%; }
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+.video-card {
+    background: #111;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #222;
+}
+.iframe-wrapper { height: 500px; background: #000; }
+
+.interaction-bar {
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    background: #1a1a1a;
+}
+.like-btn, .share-btn { background: none; border: none; color: white; cursor: pointer; font-size: 1.1rem; }
+.like-btn.active { color: #e74c3c; }
+
+.comment-section { padding: 15px; background: #0a0a0a; text-align: right; }
+.comment-msg { background: #1a1a1a; padding: 10px; border-radius: 8px; margin-bottom: 8px; font-size: 0.85rem; border-right: 3px solid var(--gold); }
+.comment-input-group { display: flex; gap: 5px; }
+.comment-input-group input { flex: 1; padding: 8px; background: #222; border: 1px solid #333; color: white; border-radius: 5px; }
+.comment-input-group button { background: var(--gold); border: none; padding: 0 15px; border-radius: 5px; font-weight: bold; cursor: pointer; }
