@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VxV | Louai Aidi - Cinematic Portfolio</title>
+    <title>VxV | Louai Aidi Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
@@ -15,6 +15,7 @@
     <header>
         <div class="profile-box">
             <img src="https://i.ibb.co/4nyRS6QT/your-image.jpg" alt="VxV" class="profile-img">
+            <div class="status-dot"></div>
         </div>
         <h1 class="glitch">VxV</h1>
         <div class="dynamic-text-container">
@@ -35,56 +36,81 @@
     </header>
 
     <main class="reels-container">
-        <h2 class="section-title">أحدث أعمالي 🐆🥇🎬</h2>
+        <h2 class="section-title">أحدث الأعمال 🐆🥇</h2>
         <div class="video-grid">
             
-          <div class="video-card">
-    <div class="iframe-wrapper">
-        <iframe src="https://www.instagram.com/reel/DUgt-asiEc2/embed" width="100%" height="100%" frameborder="0"></iframe>
-    </div>
-    <div class="interaction-bar">
-        <button class="like-btn" onclick="handleLike(this)">
-            <i class="fas fa-heart"></i> <span class="like-count">1.5K</span>
-        </button>
-        <button class="share-btn" onclick="shareLink('https://www.instagram.com/reel/DUgt-asiEc2/')">
-            <i class="fas fa-share"></i> مشاركة
-        </button>
-    </div>
-    <div class="comment-section">
-        <div class="comments-display" id="comments-reel-1">
-            <div class="comment-msg"><strong>معتز:</strong> شغل أسطوري يا لؤي، واصل 🥇</div>
-            <div class="comment-msg"><strong>عيساوي:</strong> المونتاج عالمي، الجودة 4K 🔥</div>
-        </div>
-        <div class="comment-input-group">
-            <input type="text" placeholder="سجل بـ Gmail للتعليق..." disabled>
-            <button onclick="loginAlert()">نشر</button>
-        </div>
-    </div>
-</div>
+            <div class="video-card">
+                <div class="iframe-wrapper">
+                    <iframe src="https://www.instagram.com/reel/DUgt-asiEc2/embed" width="100%" height="100%" frameborder="0"></iframe>
+                </div>
+                <div class="interaction-bar">
+                    <button class="like-btn" onclick="handleLike(this)">
+                        <i class="fas fa-heart"></i> <span class="like-count">1.5K</span>
+                    </button>
+                    <button class="share-btn" onclick="shareLink('https://www.instagram.com/reel/DUgt-asiEc2/')">
+                        <i class="fas fa-share"></i>
+                    </button>
+                </div>
+                <div class="comment-section">
+                    <div class="comments-display" id="comments-1">
+                        <div class="comment-msg"><strong>معتز:</strong> شغل أسطوري يا لؤي، واصل 🥇</div>
+                        <div class="comment-msg"><strong>عيساوي:</strong> المونتاج عالمي، الجودة 🔥</div>
+                    </div>
+                    <div class="comment-input-group">
+                        <input type="text" placeholder="سجل بـ Gmail للتعليق..." disabled>
+                        <button onclick="loginAlert()">نشر</button>
+                    </div>
+                </div>
+            </div>
 
-<div class="video-card">
-    <div class="iframe-wrapper">
-        <iframe src="https://www.instagram.com/reel/DUbYo96iLsU/embed" width="100%" height="100%" frameborder="0"></iframe>
-    </div>
-    <div class="interaction-bar">
-        <button class="like-btn" onclick="handleLike(this)">
-            <i class="fas fa-heart"></i> <span class="like-count">980</span>
-        </button>
-        <button class="share-btn" onclick="shareLink('https://www.instagram.com/reel/DUbYo96iLsU/')">
-            <i class="fas fa-share"></i> مشاركة
-        </button>
-    </div>
-    <div class="comment-section">
-        <div class="comments-display" id="comments-reel-2">
-            <div class="comment-msg"><strong>عبد الله:</strong> أفضل صانع محتوى ريلز حالياً 🐆</div>
-            <div class="comment-msg"><strong>رابح:</strong> الإبداع عنوانك يا VxV 🥇</div>
+            <div class="video-card">
+                <div class="iframe-wrapper">
+                    <iframe src="https://www.instagram.com/reel/DUbYo96iLsU/embed" width="100%" height="100%" frameborder="0"></iframe>
+                </div>
+                <div class="interaction-bar">
+                    <button class="like-btn" onclick="handleLike(this)">
+                        <i class="fas fa-heart"></i> <span class="like-count">980</span>
+                    </button>
+                    <button class="share-btn" onclick="shareLink('https://www.instagram.com/reel/DUbYo96iLsU/')">
+                        <i class="fas fa-share"></i>
+                    </button>
+                </div>
+                <div class="comment-section">
+                    <div class="comments-display" id="comments-2">
+                        <div class="comment-msg"><strong>عبد الله:</strong> أفضل صانع محتوى 🐆</div>
+                        <div class="comment-msg"><strong>رابح:</strong> الإبداع عنوانك يا بطل 🥇</div>
+                    </div>
+                    <div class="comment-input-group">
+                        <input type="text" placeholder="سجل بـ Gmail..." disabled>
+                        <button onclick="loginAlert()">نشر</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="iframe-wrapper">
+                    <iframe src="https://www.instagram.com/reel/DUksgwGiHF9/embed" width="100%" height="100%" frameborder="0"></iframe>
+                </div>
+                <div class="interaction-bar">
+                    <button class="like-btn" onclick="handleLike(this)">
+                        <i class="fas fa-heart"></i> <span class="like-count">2.1K</span>
+                    </button>
+                    <button class="share-btn" onclick="shareLink('https://www.instagram.com/reel/DUksgwGiHF9/')">
+                        <i class="fas fa-share"></i>
+                    </button>
+                </div>
+                <div class="comment-section">
+                    <div class="comments-display" id="comments-3">
+                        <div class="comment-msg"><strong>VxV:</strong> القادم أعظم بإذن الله 🎬</div>
+                    </div>
+                    <div class="comment-input-group">
+                        <input type="text" placeholder="سجل بـ Gmail..." disabled>
+                        <button onclick="loginAlert()">نشر</button>
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <div class="comment-input-group">
-            <input type="text" placeholder="سجل بـ Gmail..." disabled>
-            <button onclick="loginAlert()">نشر</button>
-        </div>
-    </div>
-</div>
     </main>
 
     <script src="script.js"></script>
